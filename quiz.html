@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevQuiz - Quiz</title>
+  
+  <!-- Tailwind + Confetti -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen gap-6">
+
+  <!-- Navbar -->
+  <nav class="w-full flex items-center justify-between px-6 py-3 shadow-lg fixed top-0 left-0 z-50">
+    <div class="text-xl font-bold logo-text ">⚡ DevQuiz</div>
+    <!-- No toggle button here -->
+  </nav>
+
+  <!-- Quiz Content -->
+  <main class="flex flex-col items-center justify-center w-full gap-6 mt-20">
+
+    <!-- Category Section -->
+    <div id="categorySection" class="neon-border w-[500px] h-[250px] flex flex-col items-center p-6 gap-4">
+      <h2 class="text-lg">Choose Category</h2>
+      <select id="categorySelect" class="w-[300px] h-[50px] neon-border">
+        <option value=""> Select </option>
+        <option value="OOP">OOP</option>
+        <option value="DSA">DSA</option>
+        <option value="DB">DB</option>
+        <option value="WebDev">Web dev</option>
+      </select>
+      <button onclick="startQuiz()" class="neon-border mt-4 px-4 py-2">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quizSection" class="flex flex-col items-center gap-6 hidden">
+      
+      <!-- Timer -->
+      <div id="timerBox" class="neon-border w-[120px] h-[50px] flex items-center justify-center text-lg">15s</div>
+
+      <!-- Question -->
+      <div id="questionBox" class="neon-border w-[500px] h-[80px] flex items-center justify-center text-xl"></div>
+
+      <!-- Result -->
+    <!-- Result -->
+<!-- Finished Heading Box -->
+<div id="finishedBox" class="neon-border w-[500px] h-[60px] flex items-center justify-center text-xl hidden">
+  🎯 Quiz Finished!
+</div>
+
+<!-- Result -->
+<div id="resultBox" class="neon-border w-[500px] flex flex-col items-center justify-center text-lg hidden">
+  <div id="scoreText"></div>
+  <div id="passFailText" class="mt-1"></div>
+</div>
+
+
+
+
+      <!-- Message -->
+      <div id="messageBox" class="neon-border w-[500px] h-[60px] flex items-center justify-center text-lg hidden">
+        🎉 Great Job!
+      </div>
+
+      <!-- Options -->
+      <div id="optionsBox" class="grid grid-cols-2 gap-4 w-[500px]">
+        <div id="optionA" class="neon-border">A</div>
+        <div id="optionB" class="neon-border">B</div>
+        <div id="optionC" class="neon-border">C</div>
+        <div id="optionD" class="neon-border">D</div>
+      </div>
+
+      <!-- After Quiz Actions -->
+      <div id="afterActions" class="flex gap-4 mt-4 hidden">
+        <button id="retakeBtn" class="neon-border px-4 py-2" onclick="retakeQuiz()">Retake Quiz</button>
+        <button id="homeBtn" class="neon-border px-4 py-2" onclick="backToCategories()">Back to Categories</button>
+        <button id="historyBtn" class="neon-border px-4 py-2" onclick="showHistory()">View History</button>
+      </div>
+
+      <!-- History -->
+      <div id="historySection" class="neon-border w-[600px] p-6 mt-6 hidden">
+        <h3 class="text-xl font-bold mb-3">📜 Quiz History</h3>
+        <ul id="historyList" class="text-left space-y-2"></ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- JS Files -->
+  <script src="script.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>

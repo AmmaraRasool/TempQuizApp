@@ -1,0 +1,30 @@
+{
+   "OOP": [
+    { "q": "Which principle of OOP promotes code reusability by allowing a class to use properties and methods of another class?", "options": ["Encapsulation", "Inheritance", "Polymorphism", "Abstraction"], "answer": "Inheritance" },
+    { "q": "Which OOP principle hides the internal details of an object and only exposes necessary parts?", "options": ["Polymorphism", "Encapsulation", "Abstraction", "Inheritance"], "answer": "Abstraction" },
+    { "q": "In OOP, the ability of a function or method to take many forms is called?", "options": ["Inheritance", "Abstraction", "Polymorphism", "Encapsulation"], "answer": "Polymorphism" },
+    { "q": "In OOP, a class that cannot be instantiated directly and is meant to be inherited is called?", "options": ["Abstract Class", "Concrete Class", "Final Class", "Static Class"], "answer": "Abstract Class" },
+    { "q": "In OOP, what principle ensures that the internal details of a class are hidden and only necessary information is exposed?", "options": ["Encapsulation", "Inheritance", "Polymorphism", "Abstraction"], "answer": "Encapsulation" }
+  ],
+   "DSA": [
+    { "q": "Which data structure uses FIFO (First In, First Out) principle?", "options": ["Stack", "Queue", "Tree", "Graph"], "answer": "Queue" },
+    { "q": "Which sorting algorithm has the best average-case time complexity?", "options": ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"], "answer": "Merge Sort" },
+    { "q": "Which data structure is best suited for implementing recursion?", "options": ["Queue", "Stack", "Heap", "Graph"], "answer": "Stack" },
+    { "q": "What is the time complexity of searching an element in a balanced binary search tree (BST)?", "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"], "answer": "O(log n)" },
+    { "q": "Which graph traversal algorithm uses a queue as its main data structure?", "options": ["Depth First Search (DFS)", "Breadth First Search (BFS)", "Dijkstra’s Algorithm", "Prim’s Algorithm"], "answer": "Breadth First Search (BFS)" }
+  ],
+  "DB": [
+    { "q": "Which type of database organizes data into rows and columns?", "options": ["Hierarchical DB", "Relational DB", "NoSQL DB", "Network DB"], "answer": "Relational DB" },
+    { "q": "Which SQL command is used to retrieve data from a database?", "options": ["INSERT", "UPDATE", "SELECT", "DELETE"], "answer": "SELECT" },
+    { "q": "Which of the following is a NoSQL database?", "options": ["MySQL", "MongoDB", "PostgreSQL", "Oracle"], "answer": "MongoDB" },
+    { "q": "In SQL, which keyword is used to remove duplicate rows from a result set?", "options": ["UNIQUE", "DISTINCT", "DELETE", "FILTER"], "answer": "DISTINCT" },
+    { "q": "Which normal form removes partial dependency in relational databases?", "options": ["1NF", "2NF", "3NF", "BCNF"], "answer": "2NF" }
+  ],  
+  "WebDev": [
+    { "q": "Which HTML tag is used to define the largest heading?", "options": ["<h1>", "<h6>", "<head>", "<title>"], "answer": "<h1>" },
+    { "q": "Which CSS property is used to change the text color of an element?", "options": ["background-color", "font-color", "color", "text-style"], "answer": "color" },
+    { "q": "Which JavaScript method is used to select an element by ID?", "options": ["getElementById()", "querySelectorAll()", "getElementsByClassName()", "getElementByTagName()"], "answer": "getElementById()" },
+    { "q": "Which HTTP status code means 'Not Found'?", "options": ["200", "301", "404", "500"], "answer": "404" },
+    { "q": "Which of the following is a JavaScript framework?", "options": ["Laravel", "React", "Django", "Flask"], "answer": "React" }
+  ]
+}

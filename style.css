@@ -1,0 +1,179 @@
+/* ============================= */
+/* THEME COLORS                  */
+/* ============================= */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f9f9f9;
+  --option-hover: #e0e0e0;
+  --neon-color: #0e1d60; /* border + glow color */
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+  --option-hover: #333333;
+}
+
+/* ============================= */
+/* GENERAL STYLES                */
+/* ============================= */
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ============================= */
+/* NAVBAR WITH GLOW              */
+/* ============================= */
+nav,
+.quiz-navbar {
+  background: var(--card-bg);
+  border-bottom: 2px solid var(--neon-color);
+  box-shadow:
+    0 0 10px var(--neon-color),
+    0 0 25px rgba(14, 29, 96, 0.6),
+    0 0 40px rgba(14, 29, 96, 0.4);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* ============================= */
+/* NEON BORDER BOXES             */
+/* ============================= */
+.neon-border {
+  border: 2px solid var(--neon-color);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background: var(--card-bg);
+  box-shadow:
+    0 0 15px var(--neon-color),
+    0 0 30px rgba(14, 29, 96, 0.5);
+  transition: all 0.3s;
+}
+
+/* ============================= */
+/* OPTIONS STYLING (Glow on hover)*/
+/* ============================= */
+#optionsBox > div {
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--neon-color);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+#optionsBox > div:hover {
+  background: var(--option-hover);
+  transform: scale(1.05);
+  box-shadow:
+    0 0 10px var(--neon-color),
+    0 0 20px rgba(14, 29, 96, 0.6);
+}
+
+/* ============================= */
+/* CORRECT / WRONG ANSWERS       */
+/* ============================= */
+.correct {
+  background-color: #4caf50 !important;
+  color: white !important;
+}
+
+.wrong {
+  background-color: #f44336 !important;
+  color: white !important;
+}
+
+/* ============================= */
+/* BUTTONS WITH GLOW             */
+/* ============================= */
+button {
+  cursor: pointer;
+  border: 2px solid var(--neon-color);
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: all 0.3s;
+  box-shadow:
+    0 0 10px var(--neon-color),
+    0 0 20px rgba(14, 29, 96, 0.6);
+}
+
+button:hover {
+  background: var(--neon-color);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* LOGO TEXT                     */
+/* ============================= */
+.logo-text {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ============================= */
+/* HIDDEN UTILITY                */
+/* ============================= */
+.hidden {
+  display: none !important;
+}
+
+/* ============================= */
+/* HISTORY SECTION               */
+/* ============================= */
+#historyList {
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+#historyList::-webkit-scrollbar {
+  width: 8px;
+}
+
+#historyList::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#historyList::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ============================= */
+/* FINISHED QUIZ HEADING         */
+/* ============================= */
+#finishedHeading {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border: 2px solid cyan;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 12px cyan;
+}
+
+#finishedBox {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 20px 0;
+  color: var(--text-color); /* use theme variable */
+}
+
+[data-theme="light"] #finishedBox {
+  color: #020202; /* black in light mode */
+}
+
+[data-theme="dark"] #finishedBox {
+  color: #ffffff; /* white in dark mode */
+}
