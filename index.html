@@ -106,27 +106,28 @@
     const body = document.getElementById("body");
 
     // Load saved theme on landing page
-    const savedTheme = localStorage.getItem("theme") || "dark";
-    applyTheme(savedTheme);
+const savedTheme = localStorage.getItem("theme") || "dark"; // always default to dark
+applyTheme(savedTheme);
 
-    toggle.addEventListener("click", () => {
-      const current = body.classList.contains("dark-mode") ? "dark" : "light";
-      const next = current === "dark" ? "light" : "dark";
-      applyTheme(next);
-      localStorage.setItem("theme", next);
-    });
+toggle.addEventListener("click", () => {
+  const current = body.classList.contains("dark-mode") ? "dark" : "light";
+  const next = current === "dark" ? "light" : "dark";
+  applyTheme(next);
+  localStorage.setItem("theme", next); // save choice
+});
 
-    function applyTheme(mode) {
-      if (mode === "dark") {
-        body.classList.remove("light-mode");
-        body.classList.add("dark-mode");
-        toggle.textContent = "Light Mode";
-      } else {
-        body.classList.remove("dark-mode");
-        body.classList.add("light-mode");
-        toggle.textContent = "Dark Mode";
-      }
-    }
+function applyTheme(mode) {
+  if (mode === "dark") {
+    body.classList.remove("light-mode");
+    body.classList.add("dark-mode");
+    toggle.textContent = "Light Mode";
+  } else {
+    body.classList.remove("dark-mode");
+    body.classList.add("light-mode");
+    toggle.textContent = "Dark Mode";
+  }
+}
+
   </script>
 </body>
 </html>
