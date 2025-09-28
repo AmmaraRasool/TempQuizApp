@@ -245,7 +245,3 @@ function launchConfetti() {
     if (Date.now() < end) requestAnimationFrame(frame);
   })();
 }
-
-
-
-
