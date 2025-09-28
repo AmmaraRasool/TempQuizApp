@@ -8,9 +8,12 @@
   <!-- Tailwind + Confetti -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
+  <!-- Your CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen gap-6">
+
   <!-- Navbar -->
   <nav class="w-full flex items-center justify-between px-6 py-3 shadow-lg fixed top-0 left-0 z-50">
     <div class="text-xl font-bold logo-text ">⚡ DevQuiz</div>
@@ -20,7 +23,38 @@
   <!-- Quiz Content -->
   <main class="flex flex-col items-center justify-center w-full gap-6 mt-20">
 
-    <!-- Category Section -->
+    <!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevQuiz - Quiz</title>
+
+  <!-- Tailwind + Confetti -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Your CSS -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen gap-6">
+
+  <!-- Navbar -->
+
+  <nav class="w-full flex items-center justify-between px-6 py-3 shadow-lg fixed top-0 left-0 z-50">
+    <div class="text-xl font-bold logo-text ">⚡ DevQuiz</div>
+  </nav>
+
+  <!-- Quiz Content -->
+
+  <main class="flex flex-col items-center justify-center w-full gap-6 mt-20 px-4">
+
+```
+<!-- Category Section -->
 <div id="categorySection" class="neon-border w-full max-w-md mx-auto min-h-[250px] flex flex-col items-center p-6 gap-4">
   <h2 class="text-lg">Choose Category</h2>
   <select id="categorySelect" class="w-full max-w-xs h-[50px] neon-border">
@@ -79,6 +113,18 @@
     <ul id="historyList" class="text-left space-y-2"></ul>
   </div>
 </div>
+```
+
+  </main>
+
+  <!-- JS Files -->
+
+  <script src="script.js"></script>
+
+  <script src="theme.js"></script>
+
+</body>
+</html>
 
   </main>
 
@@ -87,3 +133,4 @@
   <script src="theme.js"></script>
 </body>
 </html>
+
