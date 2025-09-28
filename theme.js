@@ -6,7 +6,7 @@ const themeToggle = document.getElementById("themeToggle");
 
 // Apply saved theme on page load
 window.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme") || "light";
+  const savedTheme = localStorage.getItem("theme") || "dark";
   document.documentElement.setAttribute("data-theme", savedTheme);
 
   // Update toggle button text
