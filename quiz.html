@@ -120,23 +120,8 @@
   <!-- JS Files -->
 
   <script src="script.js"></script>
-
   <script src="theme.js"></script>
-<script>
-  const body = document.body;
-  const savedTheme = localStorage.getItem("theme") || "dark"; // default dark
-  applyTheme(savedTheme);
 
-  function applyTheme(mode) {
-    if (mode === "dark") {
-      body.classList.remove("light-mode");
-      body.classList.add("dark-mode");
-    } else {
-      body.classList.remove("dark-mode");
-      body.classList.add("light-mode");
-    }
-  }
-</script>
 
 </body>
 </html>
@@ -144,7 +129,7 @@
   </main>
 
   <!-- JS Files -->
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
   <script src="theme.js"></script>
 </body>
 </html>
