@@ -1,6 +1,9 @@
 /* ============================= */
 /* CONSTANTS & GLOBAL VARIABLES  */
 /* ============================= */
+let questionOffset = 0;
+let fullSet = []; // will hold shuffled 10 questions
+
 const PASS_PERCENT = 60;
 let questions = {};
 let currentCategory = "",
@@ -58,8 +61,14 @@ function startQuiz() {
     return;
   }
 
-  shuffled = [...questions[currentCategory]];
-  shuffle(shuffled);
+  // Shuffle once only if starting fresh
+  if (questionOffset === 0) {
+    fullSet = [...questions[currentCategory]];
+    shuffle(fullSet);
+  }
+
+  shuffled = fullSet.slice(questionOffset, questionOffset + 5);
+
   currentIndex = 0;
   correctAnswers = 0;
 
@@ -69,6 +78,8 @@ function startQuiz() {
 
   loadQuestion();
 }
+
+
 
 // Load current question
 function loadQuestion() {
@@ -197,11 +208,27 @@ function retakeQuiz() {
 
   currentIndex = 0;
   correctAnswers = 0;
-  shuffled = [...questions[currentCategory]];
-  shuffle(shuffled);
+
+  // Move to next 5
+  questionOffset += 5;
+
+  // Reset after all 10 are shown
+  if (questionOffset >= questions[currentCategory].length) {
+    questionOffset = 0;
+    fullSet = []; // force reshuffle next time
+  }
+
+  if (fullSet.length === 0) {
+    fullSet = [...questions[currentCategory]];
+    shuffle(fullSet);
+  }
+
+  shuffled = fullSet.slice(questionOffset, questionOffset + 5);
 
   loadQuestion();
 }
+
+
 
 // Back to categories
 function backToCategories() {
