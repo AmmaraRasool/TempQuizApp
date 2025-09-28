@@ -1,3 +1,19 @@
+/* =============== NAVBAR BASE  ============== */
+nav,
+.quiz-navbar {
+  background: var(--card-bg);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Navbar shadows by theme */
+[data-theme="light"] nav {
+  box-shadow: 0 4px 15px #142242; /* light mode shadow */
+}
+
+[data-theme="dark"] nav {
+  box-shadow: 0 4px 12px #042060; /* dark mode shadow */
+}
+
 /* ============================= */
 /* THEME COLORS                  */
 /* ============================= */
@@ -10,9 +26,9 @@
 }
 
 [data-theme="dark"] {
-  --bg-color: #121212;
+  --bg-color: #000000;
   --text-color: #ffffff;
-  --card-bg: #1e1e1e;
+  --card-bg: #000000;
   --option-hover: #333333;
 }
 
@@ -26,19 +42,6 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* ============================= */
-/* NAVBAR WITH GLOW              */
-/* ============================= */
-nav,
-.quiz-navbar {
-  background: var(--card-bg);
-  border-bottom: 2px solid var(--neon-color);
-  box-shadow:
-    0 0 10px var(--neon-color),
-    0 0 25px rgba(14, 29, 96, 0.6),
-    0 0 40px rgba(14, 29, 96, 0.4);
-  transition: background 0.3s, box-shadow 0.3s;
-}
 
 /* ============================= */
 /* NEON BORDER BOXES             */

@@ -163,7 +163,7 @@ function finishQuiz() {
     launchConfetti();
   } else {
     document.getElementById("passFailText").innerText = "❌ You Failed!";
-    document.getElementById("finishedBox").classList.add("hidden");
+    document.getElementById("finishedBox").classList.remove("hidden");
   }
 
   // Save history

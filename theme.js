@@ -1,6 +1,5 @@
-// =======================
-// Theme Toggle Handling
-// =======================
+// ======================= Theme Toggle Handling  =======================
+
 
 // Get theme toggle button
 const themeToggle = document.getElementById("themeToggle");
